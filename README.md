@@ -9,16 +9,19 @@ Admita que, caso um ingrediente não esteja presente em `ingredients` mas esteja
 
 ## Exemplos
 
-A chamada: 
+A chamada do método com: 
 
 ```ruby
-maximum([{flour: 500, sugar: 200, eggs: 1}], {flour: 1200, sugar: 1200, eggs: 5, milk: 200})
+recipes: [{flour: 500, sugar: 200, eggs: 1}]
+ingredients: {flour: 1200, sugar: 1200, eggs: 5, milk: 200})
 ```
 deve retornar 2. 
 
-Por outro lado, a chamada:
+Por outro lado, a chamada com:
 
 ```ruby
-maximum([{apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {apples: 7, flour: 250, sugar: 250, milk: 150, oil: 100}], {sugar: 500, flour: 2000, milk: 2000})
+recipes: [{apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100},
+          {apples: 7, flour: 250, sugar: 250, milk: 150, oil: 100}]
+ingredients: {sugar: 500, flour: 2000, milk: 2000})
 ``` 
 deve retornar 0.

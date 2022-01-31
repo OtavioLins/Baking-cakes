@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Cake' do
+describe 'CakeMaker' do
   it 'Recebe 1 receita e 1 lista de ingredientes e deve retornar 3' do
     recipes = [{flour: 400}]
     ingredients = {flour: 1200}
@@ -50,4 +50,14 @@ describe 'Cake' do
 
     expect(CakeMaker.new.maximum(recipes, ingredients)).to eq(5)
   end
+
+  it 'Recebe 4 receitas e 1 lista de ingredientes e deve retornar 7' do
+    recipes = [{flour: 300, sugar: 800, eggs: 3, milk: 400, chocolate: 200}, {flour: 200, sugar: 100, eggs: 1, milk: 400, condensed_milk: 200},
+               {flour: 500, lemons: 4, yeast: 100, eggs: 3, cream: 200, condensed_milk: 200}, {carrots: 5, flour: 250, yeast: 100, sugar: 100}]
+    
+    ingredients = {flour: 4000, sugar: 1200, eggs: 22, milk: 2000, condensed_milk: 2000, chocolate: 200, yeast: 700, condensed_milk: 2000, cream: 2000, lemons: 28}
+
+    expect(CakeMaker.new.maximum(recipes, ingredients)).to eq(7)
+  end
+
 end
